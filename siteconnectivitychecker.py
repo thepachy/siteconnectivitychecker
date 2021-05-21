@@ -1,11 +1,17 @@
 import requests
 
+f = open('result.txt', 'tw', encoding = 'utf-8')
+
 def SCC(url):
+    global f
     try:
         requests.get(url)
-        print("The connection is excellent")
+        f.write("The connection is excellent")
+        #f.close()
     except requests.ConnectionError as err:
-        print("No connection")
+        f.write("No connection")
+        #f.close()
 
-url = input("Введите адрес сайта: ")
+url = input("Enter website url: ")
 SCC(url)
+f.close()
