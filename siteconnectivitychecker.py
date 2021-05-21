@@ -7,10 +7,8 @@ def SCC(url):
     try:
         requests.get(url)
         f.write("The connection is excellent")
-        #f.close()
     except requests.ConnectionError as err:
-        f.write("No connection")
-        #f.close()
+        f.write("No connection")    
 
 url = input("Enter website url: ")
 SCC(url)
