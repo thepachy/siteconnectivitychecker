@@ -2,7 +2,7 @@ import requests
 
 f = open('result.txt', 'tw', encoding = 'utf-8')
 
-def SCC(url):
+def SCC(url, times):
     global f
     i = 1
     while i <= times:
@@ -18,5 +18,5 @@ def SCC(url):
 
 url = input("Enter website url: ")
 times = int(input("Enter the number of attempts: "))
-SCC(url)
+SCC(url, times)
 f.close()
