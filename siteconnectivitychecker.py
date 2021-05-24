@@ -26,3 +26,5 @@ count = int(input("Enter the number of attempts: "))
 time = float(input("Enter the delay in seconds: "))
 siteconnectivitychecker(url, count, time)
 f.close()
+
+stop = input('\nPress "Enter" to close this window and exit the program.')
